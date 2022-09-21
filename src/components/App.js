@@ -1,6 +1,8 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
+import VideoList from "./VideoList";
+import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 
 class App extends React.Component {
   state = { videos: [] };
@@ -17,8 +19,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <SearchBar onFormSubmit={this.onTermSubmit} />i have{" "}
-        {this.state.videos.length} videos.
+        <SearchBar onFormSubmit={this.onTermSubmit} />
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
