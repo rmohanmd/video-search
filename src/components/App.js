@@ -5,8 +5,8 @@ import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
 const App = () => {
-  const { videos, setVideos } = useState([]);
-  const { selectedVideo, setSelectedVideo } = useState(null);
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
     onTermSubmit("Learn React");
